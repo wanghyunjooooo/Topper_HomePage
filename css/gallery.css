@@ -6,7 +6,7 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* 자동으로 열을 생성하며 최소 너비는 200px */
     grid-auto-rows: auto; /* 행 높이를 자동으로 조절 */
     gap: 10px; /* 이미지 사이의 여백을 0으로 설정 */
-    margin: 70px 20px 20px 20px;
+    margin: 60px 20px 20px 20px;
    
 }
 
