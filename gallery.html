@@ -59,6 +59,24 @@
         </div>
       
     </main>
-   
+    <div class="icon-container">
+        <div class="main-icon" onclick="toggleIcons()"><img src="imgzip/zziplog.png" alt=""></div>
+        <div class="other-icons">
+            <div class="icon"><a href="https://www.instagram.com/topper_mirim/"><img src="imgzip/instargram.png" alt=""></a></div>
+            <div class="icon"><a href="https://asked.kr/TOPPERed"><img src="imgzip/ask.png" alt=""></a></div>
+            <div class="icon"><a href="https://www.notion.so/2024-08-28-1483e7fc8958403d885dd269d305a265?pvs=4"><img src="imgzip/notion.png" alt=""></a></div>
+            <div class="icon"><a href="https://github.com/TOPPER-mirim"><img src="imgzip/github.png" alt=""></a></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleIcons() {
+            const container = document.querySelector('.icon-container');
+            container.classList.toggle('active');
+        }
+    </script>
+
+
 
 </body>

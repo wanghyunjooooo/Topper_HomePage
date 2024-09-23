@@ -1,13 +1,10 @@
-/* gallery.css */
-
-
+/* 전체 레이아웃 설정 */
 main {
     display: grid; /* Grid 레이아웃을 사용하여 이미지를 정렬 */
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* 자동으로 열을 생성하며 최소 너비는 200px */
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* 자동으로 열을 생성하며 최소 너비는 230px */
     grid-auto-rows: auto; /* 행 높이를 자동으로 조절 */
-    gap: 10px; /* 이미지 사이의 여백을 0으로 설정 */
+    gap: 10px; /* 이미지 사이의 여백 */
     margin: 60px 20px 20px 20px;
-   
 }
 
 .imgzip {
@@ -16,8 +13,83 @@ main {
 }
 
 .imgzip img {
-    
     width: 100%; /* 이미지 너비를 컨테이너 너비에 맞춤 */
     height: auto; /* 이미지 높이를 자동으로 조절하여 비율 유지 */
     display: block; /* 이미지의 하단 여백 제거 */
+}
+
+/* 아이콘 컨테이너 설정 */
+.icon-container {
+    position: fixed;
+    bottom: 20px; /* 하단에 고정 */
+    right: 20px; /* 오른쪽에 고정 */
+    z-index: 1000; /* 다른 요소 위에 보이도록 설정 */
+}
+
+/* 숨겨진 아이콘들이 위로 나오는 구조로 설정 */
+.other-icons {
+    position: absolute;
+    bottom: 60px; /* 처음에 아래쪽으로 숨겨둠 */
+    opacity: 0; /* 기본적으로 숨겨진 상태 */
+    transform: translateY(100%); /* 처음에 아래로 숨겨둠 */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none; /* 클릭 비활성화 */
+}
+
+/* 활성화되면 위로 펼쳐지게 설정 */
+.icon-container.active .other-icons {
+    transform: translateY(0); /* 위로 펼쳐짐 */
+    opacity: 1; /* 완전하게 보임 */
+    pointer-events: auto; /* 클릭 가능 */
+}
+
+/* 메인 아이콘과 서브 아이콘 스타일 */
+.main-icon, .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-icon {
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
+}
+
+.main-icon img{
+    width: 175%;
+}
+.main-icon:hover {
+    background-color: #0136DE;
+}
+
+.icon {
+    background-color: white;
+    color: white;
+    margin: 5px 0;
+}
+
+.icon img{
+    width: 100%;
+}
+
+.icon:hover {
+    background-color: #0136DE;
+    background-image:url("");
+}
+
+
+/* 본문과 배경 설정 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
 }
