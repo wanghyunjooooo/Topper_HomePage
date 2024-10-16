@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Topper</title>
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/q&a.css">
-
+    <link rel="stylesheet" href="css/nav.css"> <!-- 기존 네비게이션 CSS -->
+    <link rel="stylesheet" href="css/q&a.css"> <!-- 분리된 CSS 파일 -->
 </head>
 <body>
     <header class="navbar">
@@ -18,20 +17,37 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="overlay-text"><h1>토퍼 동아리에서는 무슨 활동을 하나요?</h1></div>
-        <div class="overlay-text2">스터디, 공모전과 프로젝트 활동을 합니다.<br>
+    <section id="page1" class="page">
+        <div class="image-container">
+            <img src="imgzip/단체사진(액자).png" alt="Example Image" class="animate-image">
+        </div>
+        <div class="overlay-text"><h1>토퍼 동아리에서는 <br>무슨 활동을 하나요?</h1></div>
+        <div class="overlay-text2">
+            <span class="bold-text">스터디</span>, <span class="bold-text">공모전</span>과 <span class="bold-text">프로젝트</span> 활동을 합니다.<br>
             1학기에는 공모전과 친목활동을 위주로 하고<br>
             2학기에는 스터디와 프로젝트 활동을 중심적으로 합니다.<br>
             토퍼는 선후배 사이도 좋아 서로 피드백을 주며<br>
             좋은 관계를 가질 수 있다는 장점이 있습니다!<br>
-            don't worry.<br>
-            </div>
-        <a href="https://www.instagram.com/topper_mirim/"><- instagram</a>
-    </main>
-    
+            don't worry.
+        </div>
+        <a href="https://www.instagram.com/topper_mirim/">&larr; instagram</a>
+    </section>
 
+    <section id="page2" class="page">
+        <h1>전공 잘해야 하나요?</h1>
 
+        <div class="three-img">
+            <img src="imgzip/성실함.png" alt="">
+            <img src="imgzip/인성.png" alt="">
+            <img src="imgzip/창의력.png" alt="">
+        </div>
 
+        <h6>
+            저희는 전공보다는 <span class="bold-text">성실함</span>, <span class="bold-text">인성</span>, <span class="bold-text">창의력</span>에<br>
+            초점을 맞추었습니다. 그러니 don't worry.
+        </h6>
+        
+    </section>
 
 </body>
+</html>
